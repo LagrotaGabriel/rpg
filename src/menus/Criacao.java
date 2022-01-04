@@ -9,7 +9,10 @@ import mobs.GuerreiroOrc;
 import mobs.LiderOrc;
 import java.util.Scanner;
 import utilidades.Utils;
+import view.Main;
+
 import static utilidades.Utils.utils;
+
 
 public class Criacao {
 
@@ -17,7 +20,6 @@ public class Criacao {
     Scanner input = new Scanner(System.in);
     Integer n;
     Personagem personagem = new Personagem();
-    Teste teste = new Teste();
 
     // Menu criação// Sair do game
     public void menuCriacao(){
@@ -27,7 +29,7 @@ public class Criacao {
         System.out.println("    "+"=-=-=-=-=Seja bem-vindo ao World of Javindor=-=-=-=-=");
         utils.Sleep(400);
         utils.BLine(15);
-        utils.Sleep(2300);
+        utils.Sleep(400);
         do{
             utils.ULine(15);
             utils.Sleep(200);
@@ -35,28 +37,32 @@ public class Criacao {
             utils.Sleep(400);
             System.out.println("               [2] Sair");
             utils.BLine(15);
-            System.out.print("                Escolha: ");
+            System.out.print("  Escolha: ");
             n = input.nextInt();
-            utils.Sleep(2300);
+            utils.Loading(40);
+            utils.LimparTela();
             if(n == 1){
                 cadastroPersonagem();
             }else if(n == 2){
                 System.exit(0);
             }else{
-                System.out.print("Digite um número entre 1 e 2!");
-            }//Condicional Selecionar
-        }while(n!=2);//Do While
-    }//MenuCriacao()
+                System.out.println("  Digite um número entre 1 e 2!");
+            }
+        }while(n!=2);
+    }
 
     // Cadastrar personagem ( nome, atributos, etc )
     public void cadastroPersonagem(){
 
-        System.out.println("╔════════════════════════════════════════════════════════════╗");
+        utils.ULine(15);
         System.out.println("    "+"  =-=-=-=-=-=-=Cadastro de personagem=-=-=-=-=-=-=");
-        System.out.println("╚════════════════════════════════════════════════════════════╝");
-        System.out.print("    Digite o nome do seu personagem: ");
+        utils.BLine(15);
+        System.out.print("  Digite o nome do seu personagem: ");
         personagem.setNome(input.next());
+        utils.Loading(25);
+        utils.LimparTela();
         personagem.subirNivel();
+        Main.menu.Opcoes();
 
     }
 

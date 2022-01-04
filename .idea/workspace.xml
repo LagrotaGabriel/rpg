@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37ccc9f1-28f8-48cd-b279-8d12fe0762ed" name="Changes" comment="" />
+    <list default="true" id="37ccc9f1-28f8-48cd-b279-8d12fe0762ed" name="Changes" comment="Iniciei a preparação da interface do Menu Principal do jogo, onde tudo vai ocorrer">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapa/Mapa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapa/Mapa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menus/Criacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menus/Criacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menus/MenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menus/MenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menus/Teste.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personagem/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personagem/Personagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilidades/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilidades/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="30324" />
+    <option name="totalTimeSeconds" value="42979" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -16,6 +26,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -29,6 +42,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="22vKnCqA6pT9PoycZzAmE2Yn3jE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,6 +50,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
@@ -61,6 +76,30 @@
       <option name="presentableId" value="Default" />
       <updated>1640712786150</updated>
     </task>
+    <task id="LOCAL-00001" summary="Iniciei a preparação da interface do Menu Principal do jogo, onde tudo vai ocorrer">
+      <created>1641244125106</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641244125107</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Melhorei a interface dos menus iniciais do código" />
+    <MESSAGE value="Iniciei a preparação da interface do Menu Principal do jogo, onde tudo vai ocorrer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Iniciei a preparação da interface do Menu Principal do jogo, onde tudo vai ocorrer" />
   </component>
 </project>

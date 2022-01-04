@@ -13,20 +13,25 @@ import mobs.Slime;
 import mobs.Bandido;
 import mobs.GuerreiroOrc;
 import menus.Criacao;
-import menus.Teste;
+import menus.MenuPrincipal;
 import mapa.Mapa;
+import static utilidades.Utils.utils;
 
 public class Main {
 
+    public static MenuPrincipal menu = new MenuPrincipal();
     public static Personagem personagem = new Personagem();
+    public static Mapa mapa = new Mapa();
 
     public static void main(String[] args){
 
-        Mapa mapa = new Mapa();
         Criacao criacao = new Criacao();
-        //mapa.mapaPrincipal();
-        criacao.menuCriacao();
+
+        //mapa.MapaPrincipal();
+        //criacao.menuCriacao();
         //criacao.cadastroPersonagem();
+        //personagem.subirNivel();
+        menu.Opcoes();
 
     }
 }

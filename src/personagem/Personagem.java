@@ -5,6 +5,7 @@ import armas.Mao;
 import menus.Criacao;
 import armas.Adaga;
 import armas.Gladius;
+import static utilidades.Utils.utils;
 
 public class Personagem {
 
@@ -62,21 +63,31 @@ public class Personagem {
 
         for(int i = 0; i < 3; i++){
 
-            System.out.printf("Você tem %d pontos para distribuir entre\nAgilidade (Energia), Força (Dano), e Vitalidade (Hp):", pts);
-            System.out.printf("""
-                    \n[1] Agilidade (ATUAL: %d)
-                    [2] Força (ATUAL: %d)
-                    [3] Vitalidade (ATUAL: %d)
-                    """, getAgilidade(), getForca(), getVitalidade());
-            System.out.print("Escolha: ");
+            utils.ULine(15);
+            System.out.println("          =-=-=-=-=Atributos de " + getNome() + "=-=-=-=-=");
+            utils.Sleep(25);
+            System.out.println("                  " + pts + " PONTOS RESTANTES");
+
+            utils.CLine(25);
+            System.out.print("   [1] Força: " + getForca() + "(+)");
+            System.out.println("                       Dano: " + getDano());
+            utils.Sleep(25);
+            System.out.println("   [2] Agilidade: " + getAgilidade()  + "(+)" + "                   Energia: " + getEnergia());
+            utils.Sleep(25);
+            System.out.println("   [3] Vitalidade: " + getVitalidade() + "(+)" + "                  HP: " + getHp());
+            utils.BLine(15);
+            System.out.print("   Escolha: ");
             while(atr < 1 || atr > 3) {
                 atr = input.nextInt();
-                if (atr == 1) {
+                if (atr == 2) {
                     setAgilidade(getAgilidade() + 1);
-                }else if (atr == 2) {
+                    setEnergia((getAgilidade() * 10.0));
+                }else if (atr == 1) {
                     setForca(getForca() + 1);
+                    setDano((getForca() * 10));
                 } else if (atr == 3) {
                     setVitalidade(getVitalidade() + 1);
+                    setHp((getVitalidade() * 10.0));
                 } else{
                     System.out.println("Digite um valor entre 1 e 3!");
                 }
@@ -84,23 +95,52 @@ public class Personagem {
             pts--;
             atr = 0;
 
-            Continua();
-
         } // For
 
-        setHp((getVitalidade() * 10.0));
-        setEnergia((getAgilidade() * 10.0));
-        setDano((getForca() * 10));
+        utils.ULine(15);
+        System.out.println("          =-=-=-=-=Atributos de " + getNome() + "=-=-=-=-=");
+        utils.CLine(25);
+        System.out.print("   [1] Força: " + getForca() + "(+)");
+        System.out.println("                       Dano: " + getDano());
+        utils.Sleep(25);
+        System.out.println("   [2] Agilidade: " + getAgilidade()  + "(+)" + "                   Energia: " + getEnergia());
+        utils.Sleep(25);
+        System.out.println("   [3] Vitalidade: " + getVitalidade() + "(+)" + "                  HP: " + getHp());
+        utils.BLine(15);
+    }
 
-        System.out.printf("""
-                    Atributos %s
-                    -------------------
-                    HP: %.2f || Energia: %.2f || Dano: %d
-                    Agilidade: %d
-                    Força: %d
-                    Vitalidade: %d
-                    """, getNome(), getHp(), getEnergia(), getDano(), getAgilidade(), getForca(), getVitalidade());
-        Continua();
+    // Atributos
+
+    public void listarAtributos(){
+        utils.Loading(30);
+        utils.LimparTela();
+        utils.ULine(15);
+        System.out.println("          =-=-=-=-=Atributos de " + getNome() + "=-=-=-=-=");
+        utils.CLine(25);
+        System.out.printf("                     Nível %d (%d xp)\n", getNivel(), getXp());
+        System.out.print("(");
+        for(int i = 0; i < ((getXp() * 60) /100); i++){
+            System.out.print("|");
+            utils.Sleep(15);
+        }
+        for(int i = 0; i < (60-((getXp() * 60) /100)); i++){
+            System.out.print("-");
+            utils.Sleep(15);
+        }
+        System.out.print(")\n");
+        utils.CLine(25);
+        System.out.print("     Força: " + getForca() + " (pts)");
+        System.out.println("                     Dano: " + getDano());
+        utils.Sleep(25);
+        System.out.println("     Agilidade: " + getAgilidade()  + " (pts)" + "                 Energia: " + getEnergia());
+        utils.Sleep(25);
+        System.out.println("     Vitalidade: " + getVitalidade() + " (pts)" + "                HP: " + getHp());
+        utils.CLine(25);
+        System.out.printf("  Dinheiro: $ %.2f", getDinheiro());
+        utils.Sleep(25);
+        System.out.printf("        Arma: %s", getNomeArma());
+        System.out.print("        Escudo: Vazio\n");
+        utils.BLine(15);
     }
 
     // Getters
@@ -191,17 +231,4 @@ public class Personagem {
         this.armado = st;
     }
 
-    public String Linha(){
-        return("==========================================================\n");
-    }
-
-    public void Continua(){
-        String go = "";
-        Scanner input = new Scanner(System.in);
-        while(!go.equals("CONTINUA")){
-            System.out.println("(Digite [CONTINUA] para continuar)");
-            go = input.next().toUpperCase();
-        }
-        System.out.print(Linha());
-    }
 }
